@@ -1,5 +1,6 @@
 ﻿using System;
 using Spectre.Console;
+using SoGoodLib;
 
 namespace LevelTwo
 {
@@ -7,18 +8,17 @@ namespace LevelTwo
     {
         private static void Main(string[] args)
         {
-            CanvasImage image = new CanvasImage(args[0]);
-            image.MaxWidth(int.Parse(args[1]));
-
+            Console.WriteLine(SoGoodClass.SoGoodMethod());
             if (args == null )
             {
-                image = new CanvasImage("tux.jpg");
+                CanvasImage image = new CanvasImage("tux.jpg");
                 image.MaxWidth(24);
                 AnsiConsole.Write(image);
-
             }
             else 
             {
+                CanvasImage image = new CanvasImage(args[0]);
+                image.MaxWidth(int.Parse(args[1]));
                 AnsiConsole.Write(image);
             }
         }
