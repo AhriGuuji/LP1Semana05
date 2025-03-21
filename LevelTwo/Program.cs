@@ -9,16 +9,16 @@ namespace LevelTwo
         private static void Main(string[] args)
         {
             Console.WriteLine(SoGoodClass.SoGoodMethod());
-            if (args == null )
+            CanvasImage image = new CanvasImage(args[0]);
+            image.MaxWidth(int.Parse(args[1]));
+            if (args[0] == null )
             {
-                CanvasImage image = new CanvasImage("tux.jpg");
+                image = new CanvasImage("tux.jpg");
                 image.MaxWidth(24);
                 AnsiConsole.Write(image);
             }
             else 
             {
-                CanvasImage image = new CanvasImage(args[0]);
-                image.MaxWidth(int.Parse(args[1]));
                 AnsiConsole.Write(image);
             }
         }

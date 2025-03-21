@@ -13,7 +13,7 @@ namespace WorkerTable
 
             var table = new Table();
 
-            table.AddColumn("Foo");
+            table.AddColumn("ID");
             table.AddColumn(new TableColumn("Name"));
             table.AddColumn(new TableColumn("Job"));
 
